@@ -1,0 +1,30 @@
+0. machine learning algorithm:math equation , a formulation y=f(x) , salary=f(experience,work_rate,soft_skill_habits)
+1. parametric Machine learning (ASSUMPTIONS MADE +parameters are known )algo:Linear regression ,logistic,linearsvm,naive bayes(assume: no intermediate feature dependency)
+2. non-parametric machine learning :(parameters are dynamic & uncertain)algo: Decision Tree, knn 
+3.Assumption of linear regression ?
+Y=MX+BIAS
+Y=W1X1+W2X2+W3X3+BIAS
+
+4. Loss function vs cost function
+5. loss function: gap between the predicted n real value + error rate +math function 
+6. convex loss function:join the two point in graph , then line will be inside the graph area 
+                        minima of the curve can be find out , the result is not ambiguous , the no of minima is specific n can be calculated 
+                        ml can be used to solve it no or less need of deep neural nets 
+7. non-convex loss function 
+8. deep learing or machine learning what/when to choose as solution ?
+9. false positive , false negative , true positive , true negative ?
+predict actual
+1           1   correct
+0           0    correct
+0           1    incorrect  fn
+1           0    incorrect   fp
+
+10. naive in naive bayes ?
+its supervised learning algo based on probability 
+assumption :x1 , x2 , x3 are independent of each other , biasii result 
+11. when median is more useful then mean ? central tendency , max occupied case followded by maximum no of points
+mean ::avg / total(outlier can disturb the distribution answer !!!)
+median: sorted middle term
+
+
+
