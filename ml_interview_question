@@ -6,6 +6,10 @@ Y=MX+BIAS
 Y=W1X1+W2X2+W3X3+BIAS
 
 4. Loss function vs cost function
+standardization:::
+current_data-mean_of_feature/ standard_deviation (mean=0 , standard deviation=1)
+spread of data is reduced . mean of dataset is tried to achive middle val 
+distribution is same , n each value is reduced 
 5. loss function: gap between the predicted n real value + error rate +math function 
 6. convex loss function:join the two point in graph , then line will be inside the graph area 
                         minima of the curve can be find out , the result is not ambiguous , the no of minima is specific n can be calculated 
@@ -25,6 +29,178 @@ assumption :x1 , x2 , x3 are independent of each other , biasii result
 11. when median is more useful then mean ? central tendency , max occupied case followded by maximum no of points
 mean ::avg / total(outlier can disturb the distribution answer !!!)
 median: sorted middle term
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@@@@ ML BASIC START
+
+1. AI VS ML VS DL
+2. TYPE OF ML
+3. BATCH LEARNING VS ONLINE LEARNING
+4. INSTANCE BASED VS MODEL BASED LEARNING
+5. WHEN TO USE ML OR DL
+6. STEPS IN SOLVING ML PROBLEM
+PROBLEM  FRAME ---> ANALYSE NATURE OF PROBLEM--->CONVERT IT TO MATH PROBLEM AND WHATS UR TARGET ?--->COLLECT DATA -->DATA PREPROCESS --->
+EDA--->FEATURE EXTRACTION -----> MODEL TRAIN --->MODEL EVALUATION---> MODEL DEPLOY-->TEST-->OPTIMISE
+7. DATA COLLECTION (API, SCRAP , JSON , DATAWAREHOUSE FORMATION , PIPELINE DATA )
+
+
+
+
+
+@@@@ PRACTICAL ML
+
+pd.read_csv("file.csv",header=1)
+use_cols
+encoding="latin-1"
+error_badlines=False
+parse_date=['date_col_name']
+chunksize=4000
+
+PREPROCESS----
+df.shape()
+df.columns
+df.info()
+df.describe()
+df.head()+tail()+sample()
+df.duplicates().sum()
+df.isna().sum()
+df.corr()["target_col_name"] #will give all col relation with the target_col
+iloc vs loc
+EDA --- each feature that we have collected , want to understand its statistics & trend
+
+1. univariant & multi-variant analysis
+2. data can be numeric or categorical in nature
+3. in categorical u need to determine category count rate --->count_plot 
+4. in numeric  distplot , boxplot , histogram, scatter , pairplot , heatmap are used 
+
+for ALTERNATE ---use PANDAS PROFILER
+
+FEATURE ENGINEERING :Domain knowledge 
+has 
+1. Feature Transformation
+missing values ??
+string to categorical:binning
+string to numeric:encoding
+outlier
+feature scaling: normalisation(minmax, robust) , standardization 
+2. Feature Construction
+new feature creation from old feature
+
+3. Feature Selection
+removal of features 
+4. Feature Extraction
+completely new feature is created !!! where variance is reduced 
+PCA....lda
+
+
+
+normalization:::
+min_max scaling ::: imp
+mean normalization:::
+max absolute scaling:::
+robust scaling::: current-median /IQR(75th-25th)
+
+weight(kg) ---MINMAX SCALE( current_val - min_val_feature/max_val-min_val) 
+--distribution is between range 0 to 1
+--nature of distribution remains same 
+
+
+feature scaling is required or not?
+normalisation::: given quantilty min& max value is known
+              ::: image min val o n max is 255 then use it , when range is known
+standardization::: maximum used
+
+encoding the categorical data---
+nominal(each is equal imp) and ordinal data(hard,easy,medium)
+ordinal encoding ::: one-hot encoding 
+when target is categorical then do not use one-hot encoding
+Label encoding ::: when target is categorical
+
+#split the data
+from sklearn.preprocessing import OrdinalEncoder
+oe=OrdinalEncoder(categories=[["poor,"Avg","Good"],["school","ug","pg"]])
+oe.fit(x_train)
+x_train=oe.transform(x_train)
+y_train=le.transform(y_train)
+y_test=le.transform(y_test)
+
+--CATEGORICAL DATA WITH IN NOMINAL DATA
+ONE HOT ENCODING:::
+there are 7 color , then 7 col are added with 1 at the color which is true 
+MULTICOLLINEARITY:::no math relation between colors 
+n-1 col r used , to avoid multicolinearity , dummyvariable trap
+brand_of_car ---> take frequent car category , others{}
+pd.get_dummies(df,columns=['fuel','owner'],drop_first=True)
+sklearn.onehotencoding(train_test_split-->
+ohe=OneHotEncoder()
+new=ohe.fit_transform(x_train[['fuel','owner']]).toarray()
+xtrain[['brand','km_drive']].values
+np.hstack((xtrain['brand','km_driven']),
+
+
+column transformer:::----
+AGE,CITY,GENDER,COUGH,FEAVER,HAS_COVID
+    OHE           OE
+
+SPLIT X_TRAIN,X_TEST
+AGE,CITY,GENDER,COUGH,FEAVER
+>>> feaver me Simpleimputer to replcae missing val with mean val
+>>> ordinalencoder(cough,['mild','strong']) 
+>>> onehotencoder(gender,city)
+
+from sklearn.compose import ColumnTransformer
+transformer=ColumnTransformer(transformer=[
+(t_name1,SimpleTmputer(),['Fever']),
+(t_name2,OrdinalEncoder(categories=[['Mild','Strong'],['cough']),
+(t_name3,OneHotEncoder(sparse=False,drop='first'),['Gender','City'])
+],remainder='passthrough')
+transformer.fit_transform(x_train)
+transformer.fit_transform(x_test)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
