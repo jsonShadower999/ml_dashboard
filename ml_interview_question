@@ -311,6 +311,106 @@ min=q1-1.5iqr
 max=q3+1.5iqr
 
 
+winsorization
+
+
+---------------------------------------------------------------------------
+feature construction:::
+feature spliting:::
+
+manually$$$
+family_size=sibling+homemem+1
+and transformfer to make new feature
+
+df.groupby('title).mean()
+-----------------------------------------------------------
+
+curse of dimensionality:::
+>>> after model building , you start to meleminate features n try to find accuracy...
+>>> to find the cut shot how many effective feature is needed 
+>>> optimal point judgement
+>>> image , text data , --->SPARSITY increases ; 
+dimension reduction--->
+reduce no of col
+feature selection (forward selection , backward elevation)
+feature extraction(PCA,LDA,tsne)
+
+
+PCA :::
+
+unsup learn algo
+complex technique--math aspect
+algo execution is fast 
+visalization of 10 d --- to 3d --plot graph n visualise
+>>> projection of data on x axis , projection of data on y axis , where spread is more /variance is more, pick it ,
+>>> if the projection of set of columns are similar variance , similar sppread ,,,, none :<
+>>> take another axis pca2 and try to find spread n check ...
+>>> you can transform upto n-1  level to check n diagnose spread 
+>>> spread is proportional to variance 
+
+
+
+f1 + f2+ f3+ target
+
+
+1... mean centered (standardization)
+2.. find covariance , interdependency
+3.. find eigen value /vector
+4.. cov matrix
+
+
+model build
+accuracy find
+scale the features x_terain , x_test
+pca=PCA(n_components=None)
+x_train=pca.fit_transform(x_train)
+x_test=pca.transform(x_test)
+x_train.shape--same no of cols
+PCA(n_components=100)
+---cols=100
+use the algo n train again the model
+find accuracy
+pca.expalined_variance_
+#eigen values
+pca.components_.shape
+optimal value of pca
+765 features 
+---lambda 1,..... lamba 765(eigen value of a vector)
+----lambada1/sum*100---variance of lambda 1
+30% 25 15 10 5 ....lamba 15 ===90%
+
+when it fails
+>>>> data is circular , symmetric distribution with same spread is problem
+>>>> when data is having equation , a pattern in dimension 
+>>> if distance from center is same in x n y axis 
+
+
+
+
+
+
+
+
+
+2... 
+
+
+
+do feature extraction....
+
+room + washroom+price
+sqare_feet_area/size_flat + price
+
+
+
+
+
+
+
+
+
+
+
 
 
 
