@@ -36,6 +36,20 @@
 ::: what all lib used during exteraction ?boto3 
 ::: can i automate the etl processusing DAG ?
 ::: Different form in django ? model form  vs usecreativeform ?
+::: status code n when they occur ?
+::: how can i use mixin in microservice coding ? 
+::: regular inheritance code how it differs using mixin?
+::: static method , class method , instance method ?
+:::signals whats need , signal vs events of backend how they are different ?
+
+KAFFKA with any codebase!!!
+::: kafka , how its fast ?
+::: what happens when an object-->stream-->datapacket-->flows from a resource to a network socket ?
+::: Architecture of Network Socket ?
+::: why kaffka prefers TCP communication pattern ?
+::: when the data deletion happens in kaffka ?
+::: is indexing used in partition searching inside the topics ? 
+
   
   
    
