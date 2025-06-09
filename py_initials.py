@@ -19,6 +19,7 @@ INTERVIEW QUESTIONS ::::
 17.. map , filter , reduce
 18.. Generators vs return_statement
 19.. closure 
+
 20.. @staticmethod, @classmethod , @abstractmethod , @retry , @cache , @get_time , @atexit , @total_ordering
 21.. dunder method
 22 .. instance method , class method , static method 
@@ -36,6 +37,12 @@ INTERVIEW QUESTIONS ::::
 33.. memory management  in py ? GIL ?garbage_collector n ref_count ?BestFit Algorithm ?
 34., __init__ , __str__ , __del__ , __repr__
 FUNCTIONS USED IN STRING MANIPULATIONS ===>
+35. Monkey Patching !
+36.Pydantic library :
+37. ABC class vs Interface class 
+38. thread vs threadpool 
+39. thread lifecycle 
+
 
 
 str.upper()
